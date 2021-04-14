@@ -9,16 +9,15 @@ const webpack = require('webpack');
 const isDev = process.argv.some(v => v.includes('webpack-dev-server'));
 const isPinata = process.argv.some(v => v.includes('pinata'));
 
-module.exports =
-{
+const config = {
     // This is the "main" file which should include all other modules
     entry: './src/main.ts',
     // Where should the compiled file go?
     output:
-    {
-        publicPath: isPinata ? './' : '/',
-        filename: '[name].[hash].js',
-    },
+        {
+            publicPath: isPinata ? './' : '/',
+            filename: '[name].[hash].js',
+        },
     mode: isDev ? 'development' : 'production',
     devtool: isDev ? '': 'eval',
     resolve: {
@@ -28,57 +27,61 @@ module.exports =
         extensions: ['.ts', '.js', '.json'],
     },
     module:
-    {
-        rules:
-        [
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-            },
-            {
-                test: /\.tsx?$/,
-                loader: 'ts-loader',
-                // exclude: /node_modules/,
-                options: {
-                    appendTsSuffixTo: [/\.vue$/],
-                },
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: [
+        {
+            rules:
+                [
                     {
-                        loader: 'file-loader',
-                        options:
-                        {
-                            name: '[path][name].[ext]',
+                        test: /\.vue$/,
+                        loader: 'vue-loader',
+                    },
+                    {
+                        test: /\.tsx?$/,
+                        loader: 'ts-loader',
+                        // exclude: /node_modules/,
+                        options: {
+                            appendTsSuffixTo: [/\.vue$/],
                         },
                     },
+                    {
+                        test: /\.css$/,
+                        use: ['style-loader', 'css-loader'],
+                    },
+                    {
+                        test: /\.(png|jpg|gif|svg)$/,
+                        use: [
+                            {
+                                loader: 'file-loader',
+                                options:
+                                    {
+                                        name: '[path][name].[ext]',
+                                    },
+                            },
+                        ],
+                    },
                 ],
-            },
-        ],
-    },
+        },
     plugins:
-    [
-        new Dotenv({
-            systemvars: true,
-        }),
-        new CleanWebpackPlugin(),
-        new webpack.DefinePlugin({
-            __VUE_OPTIONS_API__: false,
-            __VUE_PROD_DEVTOOLS__: false,
-            APP_COMMIT: JSON.stringify(new GitRevisionPlugin().commithash()),
-        }),
-        new HtmlWebpackPlugin({
-            template: 'public/index.html',
-            favicon: 'public/favicon.ico',
-        }),
-        new VueLoaderPlugin(),
-    ],
+        [
+            new Dotenv({
+                systemvars: true,
+            }),
+            new CleanWebpackPlugin(),
+            new webpack.DefinePlugin({
+                __VUE_OPTIONS_API__: false,
+                __VUE_PROD_DEVTOOLS__: false,
+                APP_COMMIT: JSON.stringify(new GitRevisionPlugin().commithash()),
+            }),
+            new HtmlWebpackPlugin({
+                template: 'public/index.html',
+                favicon: 'public/favicon.ico',
+            }),
+            new VueLoaderPlugin(),
+        ],
     devServer: {
         hot: true,
     },
+
 };
+config.devtool = '#cheap-module-eval-source-map';
+
+module.exports = config;
