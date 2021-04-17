@@ -5,7 +5,7 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git://github.com/balancer-labs/balancer-frontend.git"
+    "url": "git://github.com/heco-balancer/balancer-frontend.git"
   },
   "scripts": {
     "build": "webpack",
@@ -16,7 +16,7 @@
     "stylelint": "stylelint \"src/**/*.vue\""
   },
   "dependencies": {
-    "@balancer-labs/assets": "github:balancer-labs/assets#master",
+    "@balancer-labs/assets": "github:heco-balancer/assets#master",
     "@balancer-labs/sor": "^1.0.0-1",
     "@ethersproject/address": "^5.0.6",
     "@ethersproject/constants": "^5.0.6",

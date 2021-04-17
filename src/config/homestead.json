@@ -1,5 +1,6 @@
 {
     "network": "homestead",
+    "rpcUrl": "https://mainnet.infura.io/v3/03f1a9a53dee4bd5a7d3dde58ce26442",
     "chainId": 1,
     "precision": 6,
     "infuraKey": "237c3102f39b4940abbe12dc49165cd6",

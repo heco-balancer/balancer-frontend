@@ -1,5 +1,6 @@
 import homestead from './homestead.json';
 import kovan from './kovan.json';
+import heco from './heco.json';
 
 interface Connector {
     id: string;
@@ -17,6 +18,7 @@ export interface AssetMetadata {
 
 interface Config {
     network: string;
+    rpcUrl: string;
     chainId: number;
     precision: number;
     infuraKey: string;
@@ -44,6 +46,10 @@ const configs = {
     42:{
         untrusted: [],
         ...kovan,
+    },
+    256:{
+        untrusted: [],
+        ...heco,
     },
 };
 // eslint-disable-next-line no-undef

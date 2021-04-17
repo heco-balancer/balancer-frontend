@@ -1,25 +1,25 @@
 {
-    "network": "kovan",
-    "rpcUrl": "https://kovan.infura.io/v3/409f11e91b394a2392d4f66aaadbfb49",
-    "chainId": 42,
+    "network": "heco",
+    "rpcUrl": "https://http-testnet.hecochain.com",
+    "chainId": 256,
     "precision": 6,
     "infuraKey": "409f11e91b394a2392d4f66aaadbfb49",
     "alchemyKey": "f8935628a5424a3bba5a01c142a2379f",
     "subgraphUrl": "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-kovan",
     "subgraphBackupUrl": "https://ipfs.fleek.co/ipns/balancer-bucket.storage.fleek.co/balancer-exchange-kovan/pools",
     "addresses": {
-        "bFactory": "0x8f7F78080219d4066A8036ccD30D588B416a40DB",
-        "bActions": "0xeACBe91fE3F8eF6086027AEC0127De982205b1Aa",
-        "dsProxyRegistry": "0x130767E0cf05469CF11Fa3fcf270dfC1f52b9072",
-        "exchangeProxy": "0x4e67bf5bD28Dd4b570FBAFe11D0633eCbA2754Ec",
-        "weth": "0xd0A1E359811322d97991E03f863a0C30C2cF029C",
-        "multicall": "0x2cc8688C5f75E365aaEEb4ea8D6a480405A48D2A"
+        "bFactory": "0xeBfAd5c1D36Aa59fBdE1A70843Cdd6881944BC73",
+        "bActions": "0xf9C45da9dA672a0DE034a1415820a91af9722770",
+        "dsProxyRegistry": "0xd9145CCE52D386f254917e481eB44e9943F39138",
+        "exchangeProxy": "0x981c0C07268991ED14224146FE1CDcA00F908209",
+        "weth": "0xfeB76Ae65c11B363Bd452afb4A7eC59925848656",
+        "multicall": "0x2bC28363A50729EE04261B65622B4a4f9B80FC7C"
     },
     "connectors": {
         "injected": {},
         "walletconnect": {
             "rpc": {
-                "42": "https://kovan.infura.io/v3/409f11e91b394a2392d4f66aaadbfb49"
+                "42": "https://http-testnet.hecochain.com"
             }
         },
         "portis": {
@@ -29,8 +29,8 @@
         "walletlink": {
             "appName": "Balancer Exchange",
             "darkMode": true,
-            "chainId": 42,
-            "ethJsonrpcUrl": "https://kovan.infura.io/v3/409f11e91b394a2392d4f66aaadbfb49"
+            "chainId": 256,
+            "ethJsonrpcUrl": "https://http-testnet.hecochain.com"
         },
         "fortmatic": {
             "apiKey": "pk_live_9CE8FD92E54684ED"
