@@ -12,7 +12,7 @@
         "bActions": "0xf9C45da9dA672a0DE034a1415820a91af9722770",
         "dsProxyRegistry": "0xd9145CCE52D386f254917e481eB44e9943F39138",
         "exchangeProxy": "0x981c0C07268991ED14224146FE1CDcA00F908209",
-        "weth": "0xfeB76Ae65c11B363Bd452afb4A7eC59925848656",
+        "weth": "0x7af326b6351c8a9b8fb8cd205cbe11d4ac5fa836",
         "multicall": "0x2bC28363A50729EE04261B65622B4a4f9B80FC7C"
     },
     "connectors": {
