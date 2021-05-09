@@ -166,6 +166,10 @@ function getPreferences(): Preferences {
                 inputAsset: '0x1528F3FCc26d13F7079325Fb78D9442607781c8C',
                 outputAsset: '0xef13C0c8abcaf5767160018d268f9697aE4f5375',
             },
+            256: {
+                inputAsset: '0xfeB76Ae65c11B363Bd452afb4A7eC59925848656',
+                outputAsset: '0x7af326b6351c8a9b8fb8cd205cbe11d4ac5fa836',
+            },
         },
         list: 'balancer',
         darkmode: true,

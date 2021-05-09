@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@balancer-labs/assets": "github:heco-balancer/assets#master",
-    "@balancer-labs/sor": "^1.0.0-1",
+    "@heco-testing-miao/sor": "^1.0.0",
     "@ethersproject/address": "^5.0.6",
     "@ethersproject/constants": "^5.0.6",
     "@ethersproject/contracts": "^5.0.6",

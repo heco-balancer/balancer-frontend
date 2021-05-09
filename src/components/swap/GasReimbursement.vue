@@ -4,8 +4,8 @@
         target="_blank"
         class="message-link"
     >
-        <div 
-            v-if="isActive()" 
+        <div
+            v-if="isActive()"
             class="message"
         >
             <div>
@@ -24,7 +24,7 @@
 
 import { PropType, defineComponent, computed } from 'vue';
 import { useStore } from 'vuex';
-import { Swap, Pool } from '@balancer-labs/sor/dist/types';
+import { Swap, Pool } from '@heco-testing-miao/sor/dist/types';
 import { RootState } from '@/store';
 import { ETH_KEY } from '@/utils/helpers';
 import config from '@/config';
@@ -74,7 +74,7 @@ export default defineComponent({
             const eligibleSwaps = props.swaps.flat().filter(hop => {
                 return hop.tokenIn in eligibleAssets && hop.tokenOut in eligibleAssets;
             });
-            
+
             const addressInIsEligible = (props.addressIn === ETH_KEY || props.addressIn.toLowerCase() in eligibleAssets);
             const addressOutIsEligible = (props.addressOut === ETH_KEY || props.addressOut.toLowerCase() in eligibleAssets);
             const reimburseAllSwaps = addressInIsEligible && addressOutIsEligible;
